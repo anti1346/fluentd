@@ -1,4 +1,4 @@
-FROM fluent/fluentd:v1.9.1-1.0
+FROM fluent/fluentd:v1.9-debian-1
 
 # Use root account to use apt
 USER root
@@ -17,6 +17,6 @@ RUN buildDeps="sudo make gcc g++ libc-dev" \
  && rm -rf /var/lib/apt/lists/* \
  && rm -rf /tmp/* /var/tmp/* /usr/lib/ruby/gems/*/cache/*.gem
 
-#COPY fluent.conf /fluentd/etc/
+COPY fluent.conf /fluentd/etc/
 
 USER fluent
