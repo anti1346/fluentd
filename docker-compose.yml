@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3.9'
 services:
 
   fluentd:
@@ -10,7 +10,7 @@ services:
     volumes:
       - /usr/share/zoneinfo/Asia/Seoul:/etc/localtime:ro
       - ./docker/config/fluent.conf:/fluentd/etc/fluent.conf
-      - ./fluentd_data/log:/fluentd/log
+      - ./fluentd/log:/fluentd/log
     network_mode: host
     # ports:
     #   - "8888:8888"
