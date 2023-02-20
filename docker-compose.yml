@@ -3,7 +3,8 @@ services:
 
   fluentd:
     build: ./docker
-    image: anti1346/fluentd:latest
+    #image: anti1346/fluentd:latest
+    image: anti1346/fluentd:v1.12-debian
     restart: unless-stopped
     container_name: fluentd
     hostname: fluentd
