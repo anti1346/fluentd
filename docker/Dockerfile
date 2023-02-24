@@ -4,6 +4,7 @@ USER root
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends $buildDeps \
+  && gem install elasticsearch -v 7.13 \
   && gem install fluent-plugin-elasticsearch \
   && gem sources --clear-all \
   && rm -rf /var/lib/apt/lists/* \
